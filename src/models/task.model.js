@@ -5,13 +5,17 @@ const taskSchema = new Schema({
         type: String,
         default: "tarea",
     },
-    desciption: {
+    description: {
         type: String,
         default: "No description",
     },
     date: {
         type: Date,
         default: new Date
+    },
+    finish: {
+        type: Boolean,
+        default: false
     }
 });
 
