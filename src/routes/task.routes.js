@@ -3,10 +3,6 @@ const Task = require("../models/task.model");
 const router = express.Router();
 require("../database");
 
-router.get("/", async (req, res) => {
-  const tasks = await Task.find()
-  res.json(tasks);
-});
 
 router.get("/task", async (req, res) => {
   const tasks = await Task.find()
