@@ -655,7 +655,43 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRedux = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n\nvar _Storage = __webpack_require__(/*! ./Storage */ \"./src/app/Storage.js\");\n\nvar _Storage2 = _interopRequireDefault(_Storage);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar app = function app() {\n    return _react2.default.createElement(\n        _reactRedux.Provider,\n        { store: _Storage2.default },\n        _react2.default.createElement(\n            'main',\n            null,\n            'hola mundo cruel'\n        )\n    );\n};\nexports.default = app;\n\n//# sourceURL=webpack:///./src/app/app.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRedux = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n\nvar _Storage = __webpack_require__(/*! ./Storage */ \"./src/app/Storage.js\");\n\nvar _Storage2 = _interopRequireDefault(_Storage);\n\nvar _Navbar = __webpack_require__(/*! ./components/navbar/Navbar.js */ \"./src/app/components/navbar/Navbar.js\");\n\nvar _Navbar2 = _interopRequireDefault(_Navbar);\n\nvar _Body = __webpack_require__(/*! ./components/body/Body */ \"./src/app/components/body/Body.js\");\n\nvar _Body2 = _interopRequireDefault(_Body);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar app = function app() {\n    return _react2.default.createElement(\n        _reactRedux.Provider,\n        { store: _Storage2.default },\n        _react2.default.createElement(\n            'main',\n            null,\n            _react2.default.createElement(_Navbar2.default, null),\n            _react2.default.createElement(_Body2.default, null)\n        )\n    );\n};\nexports.default = app;\n\n//# sourceURL=webpack:///./src/app/app.js?");
+
+/***/ }),
+
+/***/ "./src/app/components/body/Body.js":
+/*!*****************************************!*\
+  !*** ./src/app/components/body/Body.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _Form_add_task = __webpack_require__(/*! ../form-add-task/Form_add_task */ \"./src/app/components/form-add-task/Form_add_task.js\");\n\nvar _Form_add_task2 = _interopRequireDefault(_Form_add_task);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Body = function Body() {\n    return _react2.default.createElement(\n        'div',\n        { className: 'container' },\n        _react2.default.createElement(\n            'div',\n            { className: 'row' },\n            _react2.default.createElement(\n                'div',\n                { className: 'col s5' },\n                _react2.default.createElement(_Form_add_task2.default, null)\n            ),\n            _react2.default.createElement(\n                'div',\n                { className: 'col 57' },\n                'wwwwwwwwwww'\n            )\n        )\n    );\n};\n\nexports.default = Body;\n\n//# sourceURL=webpack:///./src/app/components/body/Body.js?");
+
+/***/ }),
+
+/***/ "./src/app/components/form-add-task/Form_add_task.js":
+/*!***********************************************************!*\
+  !*** ./src/app/components/form-add-task/Form_add_task.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar Form_add_task = function Form_add_task() {\n    return _react2.default.createElement(\n        \"div\",\n        { className: \"form\" },\n        _react2.default.createElement(\n            \"div\",\n            { className: \"card\" },\n            _react2.default.createElement(\n                \"div\",\n                { className: \"card-content\" },\n                _react2.default.createElement(\n                    \"form\",\n                    null,\n                    _react2.default.createElement(\n                        \"div\",\n                        { className: \"row\" },\n                        _react2.default.createElement(\n                            \"div\",\n                            { className: \"input-fiel col s12 \" },\n                            _react2.default.createElement(\"input\", { type: \"text\", placeholder: \"Title\" })\n                        )\n                    ),\n                    _react2.default.createElement(\n                        \"div\",\n                        { className: \"row\" },\n                        _react2.default.createElement(\n                            \"div\",\n                            { className: \"input-fiel col s12 \" },\n                            _react2.default.createElement(\"textarea\", { className: \"materialize-textarea\", placeholder: \"task description\" })\n                        )\n                    ),\n                    _react2.default.createElement(\n                        \"div\",\n                        { className: \"row\" },\n                        _react2.default.createElement(\n                            \"div\",\n                            { className: \"input-fiel col s12 \" },\n                            _react2.default.createElement(\n                                \"button\",\n                                { className: \"btn light-blue darken-4\" },\n                                \"Send\"\n                            )\n                        )\n                    )\n                )\n            )\n        )\n    );\n};\n\nexports.default = Form_add_task;\n\n//# sourceURL=webpack:///./src/app/components/form-add-task/Form_add_task.js?");
+
+/***/ }),
+
+/***/ "./src/app/components/navbar/Navbar.js":
+/*!*********************************************!*\
+  !*** ./src/app/components/navbar/Navbar.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar navbar = function navbar() {\n    return _react2.default.createElement(\n        \"section\",\n        null,\n        _react2.default.createElement(\n            \"nav\",\n            { className: \"light-blue darken-4\" },\n            _react2.default.createElement(\n                \"div\",\n                { className: \"container\" },\n                _react2.default.createElement(\n                    \"a\",\n                    { className: \"brand-logo\", href: \"/\" },\n                    \"Todo list\"\n                )\n            )\n        )\n    );\n};\n\nexports.default = navbar;\n\n//# sourceURL=webpack:///./src/app/components/navbar/Navbar.js?");
 
 /***/ }),
 
