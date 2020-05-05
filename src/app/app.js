@@ -1,11 +1,14 @@
 import React from 'react'
+import { Provider } from 'react-redux'
+import store from './Storage'
 
 const app = () => {
     return (
-        <div>
-            Hola soy app
-        </div>
+        <Provider store={store}>
+            <main>
+                hola mundo cruel
+            </main>
+        </Provider>
     )
 }
-
 export default app
