@@ -1,7 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux'
 
-const title;
+const task = {
+    title: "",
+    description: ""
+}
+
+const onChangeInput = (e) => {
+    task[e.target.name] = e.target.value
+}
 
 const Form_add_task = ({ addTask }) => {
     return (
@@ -11,12 +18,12 @@ const Form_add_task = ({ addTask }) => {
                     <form>
                         <div className="row">
                             <div className="input-fiel col s12 ">
-                                <input type="text" placeholder="Title"></input>
+                                <input name="title" type="text" onChange={(e) => onChangeInput(e)} placeholder="Title"></input>
                             </div>
                         </div>
                         <div className="row">
                             <div className="input-fiel col s12 ">
-                                <textarea className="materialize-textarea" placeholder="task description"></textarea>
+                                <textarea name="description" onChange={(e) => onChangeInput(e)} className="materialize-textarea" placeholder="task description"></textarea>
                             </div>
                         </div>
                         <div className="row">
@@ -39,8 +46,10 @@ const mapDispachesToProps = dispach => ({
         dispach({
             type: "ADD_TASK",
             event: e,
+            task: task
         })
-    }
+    },
+    onChangeInput
 });
 
 export default connect(mapStateToPropo, mapDispachesToProps)(Form_add_task);
