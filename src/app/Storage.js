@@ -8,9 +8,15 @@ const initialState = [
 ]
 
 const reducerTask = (state = initialState, action) => {
+    switch (action.type) {
+        case "ADD_TASK": {
+            action.event.preventDefault();
+        }
+            break;
 
-    console.log(action)
-
+        default:
+            break;
+    }
     return state;
 }
 

@@ -1,6 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux'
 
-const Form_add_task = () => {
+const title;
+
+const Form_add_task = ({ addTask }) => {
     return (
         <div className="form">
             <div className="card">
@@ -18,7 +21,7 @@ const Form_add_task = () => {
                         </div>
                         <div className="row">
                             <div className="input-fiel col s12 ">
-                                <button className="btn light-blue darken-4">Send</button>
+                                <button className="btn light-blue darken-4" onClick={(e) => addTask(e)}>Send</button>
                             </div>
                         </div>
                     </form>
@@ -28,4 +31,16 @@ const Form_add_task = () => {
     );
 }
 
-export default Form_add_task;
+const mapStateToPropo = state => ({
+});
+
+const mapDispachesToProps = dispach => ({
+    addTask(e) {
+        dispach({
+            type: "ADD_TASK",
+            event: e,
+        })
+    }
+});
+
+export default connect(mapStateToPropo, mapDispachesToProps)(Form_add_task);
