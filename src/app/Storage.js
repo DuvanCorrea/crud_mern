@@ -1,11 +1,14 @@
 import { createStore } from 'redux'
 
-const initialState = [
-    {
-        title: "title",
-        description: "description"
-    }
-]
+const initialState = {
+    tasks: [{
+        title: "test title",
+        description: "test description"
+    }, {
+        title: "test title2",
+        description: "test description2"
+    },]
+}
 
 const reducerTask = (state = initialState, action) => {
     switch (action.type) {
