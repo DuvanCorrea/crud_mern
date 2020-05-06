@@ -1,13 +1,9 @@
 import { createStore } from 'redux'
 
 const initialState = {
-    tasks: [{
-        title: "test title",
-        description: "test description"
-    }, {
-        title: "test title2",
-        description: "test description2"
-    },]
+    tasks: fetch("/task")
+        .then(res => res.json)
+        .then(res => console.log(res))
 }
 
 const reducerTask = (state = initialState, action) => {
